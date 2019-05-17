@@ -1,0 +1,14 @@
+<StackLayout orientation="vertical">
+    <label text="{{data.labelContador}} {{data.contador}}"></label>
+    <Button class="btn btn-primary btn-active" id="button" text='{{data.contador}}' (tap)="multiplicar()"></Button>
+    <Button class="btn btn-primary btn-active" id="button" text='{{data.contador}}' (tap)="dividir()"></Button>
+
+    <FlexboxLayout *ngFor="let usuario of data.usuarios" flexDirection="row" width="auto" height="auto" backgroundColor="lightgray">
+        <StackLayout style="margin:15px" orientation="vertical" width="100%" height="500px" backgroundColor="#efefef">
+            <Label text="{{usuario.id}}"></Label>
+        </StackLayout>
+        <StackLayout style="margin:15px" orientation="vertical" width="100%" height="500px" backgroundColor="#ececec">
+            <Label text="{{usuario.nombre}}"></Label>
+        </StackLayout>
+    </FlexboxLayout>
+</StackLayout>

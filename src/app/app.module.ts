@@ -5,6 +5,10 @@ import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angul
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
+// REDUX
+import { StoreModule } from "@ngrx/store";
+import { DataReducer } from "./data/data.reducer";
+
 // SEARCH
 import { SearchMainComponent } from "./search/search.module";
 import { SearchComponent } from "./search/search.component";
@@ -12,6 +16,7 @@ import { SearchComponent } from "./search/search.component";
 // HOME
 import { HomeMainComponent } from "./home/home.module";
 import { HomeComponent } from "./home/home.component";
+import { ContadorComponent } from "./home/contador/contador.component";
 
 // SETTINGS
 import { SettingsMainComponent } from "./settings/settings.module";
@@ -32,7 +37,8 @@ import { ClientesComponent } from "./clientes/clientes.component";
     imports: [
         AppRoutingModule,
         NativeScriptModule,
-        NativeScriptUISideDrawerModule
+        NativeScriptUISideDrawerModule,
+        StoreModule.forRoot({ data: DataReducer })
     ],
     declarations: [
         AppComponent,
@@ -40,6 +46,7 @@ import { ClientesComponent } from "./clientes/clientes.component";
         SearchComponent,
         HomeMainComponent,
         HomeComponent,
+        ContadorComponent,
         SettingsMainComponent,
         SettingsComponent,
         ProveedoresMainComponent,
