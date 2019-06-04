@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { SearchMainComponent } from "./search/search.module";
+import { ProductosMainComponent } from "./productos/productos.module";
 import { HomeMainComponent } from "./home/home.module";
 import { SettingsMainComponent } from "./settings/settings.module";
 import { ProveedoresMainComponent } from "./proveedores/proveedores.module";
@@ -18,8 +18,8 @@ export const routes: Routes = [
         component: HomeMainComponent
     },
     {
-        path: "searchMain",
-        component: SearchMainComponent
+        path: "productosMain",
+        component: ProductosMainComponent
     },
     {
         path: "settingsMain",

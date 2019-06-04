@@ -4,6 +4,9 @@
     because ActionItems are shown on the right side of the ActionBar
     -->
     <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem ios:visibility="collapsed" android.position="right"  color="white" icon="res://back" (tap)="setNuevoProducto()">
+        <Label text="&#xf067;" class="fa"></Label>
+    </ActionItem>
     <!-- 
     Use the ActionItem for IOS with position set to left. Using the
     NavigationButton as a side-drawer button in iOS is not possible,
@@ -12,10 +15,17 @@
     <ActionItem icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
         ios.position="left">
     </ActionItem>
-    <Label class="action-bar-title" text="Busqueda"></Label>
+    <Label class="action-bar-title" text="Productos"></Label>
 </ActionBar>
 
 <GridLayout class="page page-content">
-    <Label class="page-icon fa" text="&#xf002;"></Label>
-    <Label class="page-placeholder" text="<!-- Contenido -->"></Label>
+
+    <ListView [items]="productosArr" class="list-group">
+        <ng-template let-item="item">
+          <StackLayout orientation="horizontal" (tap)="alerta(item)">
+                  <Image width="50" height="50" src="https://img.icons8.com/color/48/000000/ingredients.png" ></Image>
+                  <Label [text]="item.nombre" class="list-group-item"></Label>
+          </StackLayout>
+        </ng-template>
+    </ListView>
 </GridLayout>

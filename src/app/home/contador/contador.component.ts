@@ -4,8 +4,7 @@ import { Store } from "@ngrx/store";
 import { MultiplicarAction, DividirAction } from "../../data/data.actions";
 @Component({
     selector: "contador",
-    templateUrl: "./contador.component.html",
-    styles: ["./contador.component.css"]
+    templateUrl: "./contador.component.html"
 })
 export class ContadorComponent implements IState {
 data: any;

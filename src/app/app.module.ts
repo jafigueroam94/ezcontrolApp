@@ -1,6 +1,7 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
+import { BarcodeScanner } from 'nativescript-barcodescanner';
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -9,14 +10,15 @@ import { AppComponent } from "./app.component";
 import { StoreModule } from "@ngrx/store";
 import { DataReducer } from "./data/data.reducer";
 
-// SEARCH
-import { SearchMainComponent } from "./search/search.module";
-import { SearchComponent } from "./search/search.component";
+// PRODUCTOS
+import { ProductosMainComponent } from "./productos/productos.module";
+import { ProductosComponent } from "./productos/productos.component";
 
 // HOME
 import { HomeMainComponent } from "./home/home.module";
 import { HomeComponent } from "./home/home.component";
 import { ContadorComponent } from "./home/contador/contador.component";
+import { ScannerComponent } from "./home/scanner/scanner.component";
 
 // SETTINGS
 import { SettingsMainComponent } from "./settings/settings.module";
@@ -42,11 +44,12 @@ import { ClientesComponent } from "./clientes/clientes.component";
     ],
     declarations: [
         AppComponent,
-        SearchMainComponent,
-        SearchComponent,
+        ProductosMainComponent,
+        ProductosComponent,
         HomeMainComponent,
         HomeComponent,
         ContadorComponent,
+        ScannerComponent,
         SettingsMainComponent,
         SettingsComponent,
         ProveedoresMainComponent,
@@ -56,6 +59,9 @@ import { ClientesComponent } from "./clientes/clientes.component";
     ],
     schemas: [
         NO_ERRORS_SCHEMA
+    ],
+    providers : [
+        BarcodeScanner
     ]
 })
 export class AppModule { }
