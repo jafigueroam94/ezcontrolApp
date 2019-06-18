@@ -1,9 +1,7 @@
-<ListView [items]="botonesArr" class="list-group">
-    <ng-template let-item="item" >
-            <GridLayout rows="60" columns="100%,200%,100%" (doubleTap)="alerta()">
-                <Image row="0" col="0" class="roundBorder" width="35" height="35" src="https://img.icons8.com/material/24/4a90e2/left-view.png"></Image>
-                <Label row="0" col="1" [text]="item.label" class="list-group-item textCenter"></Label>
-                <Image row="0" col="2" width="30" height="30" src="https://img.icons8.com/material/24/000000/chevron-right.png" ></Image>
-            </GridLayout>
-    </ng-template>
-</ListView>
+<StackLayout *ngFor="let item of botonesArr">
+        <GridLayout class="marginBotonRedirect botonRedirect borderRadiusBotonRedirect" rows="60" columns="100%,200%,100%" (doubleTap)="alerta()">
+            <Image row="0" col="0"  width="35" height="35" src="https://img.icons8.com/material/24/4a90e2/left-view.png"></Image>
+            <Label row="0" col="1" [text]="item.label" class="textCenter"></Label>
+            <Image row="0" col="2" width="15" height="15" src="https://img.icons8.com/material/24/000000/chevron-right.png" ></Image>
+        </GridLayout>
+</StackLayout>

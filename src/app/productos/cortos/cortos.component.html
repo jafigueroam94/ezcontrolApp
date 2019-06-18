@@ -1,0 +1,8 @@
+<ListView [items]="botonesArr" class="list-group">
+    <ng-template let-item="item" >
+            <GridLayout rows="auto" columns="100%,300%" (doubleTap)="alerta()">
+                <Label row="0" col="0" [text]="item.diferencia" class="list-group-item textCenter font10"></Label>
+                <Label row="0" col="1" [text]="item.label" class="list-group-item textCenter font10"></Label>
+            </GridLayout>
+    </ng-template>
+</ListView>

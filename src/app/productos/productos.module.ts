@@ -5,7 +5,9 @@ import * as app from "tns-core-modules/application";
 @Component({
     selector: "ProductosModule",
     moduleId: module.id,
-    templateUrl: "./productos.module.html"
+    templateUrl: "./productos.module.html",
+    styleUrls: ['./productos.module.css']
+
 })
 export class ProductosMainComponent implements OnInit {
 
