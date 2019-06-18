@@ -13,6 +13,7 @@ import { DataReducer } from "./data/data.reducer";
 // PRODUCTOS
 import { ProductosMainComponent } from "./productos/productos.module";
 import { ProductosComponent } from "./productos/productos.component";
+import { BotonesComponent } from "./productos/botones/botones.component";
 
 // HOME
 import { HomeMainComponent } from "./home/home.module";
@@ -46,6 +47,7 @@ import { ClientesComponent } from "./clientes/clientes.component";
         AppComponent,
         ProductosMainComponent,
         ProductosComponent,
+        BotonesComponent,
         HomeMainComponent,
         HomeComponent,
         ContadorComponent,
