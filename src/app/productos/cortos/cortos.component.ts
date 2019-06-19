@@ -4,7 +4,7 @@ import { Component, OnInit } from "@angular/core";
     selector: "Cortos",
     moduleId: module.id,
     templateUrl: "./cortos.component.html",
-    styleUrls: ['./cortos.component.css']
+    styleUrls: ['./cortos.component.scss']
 })
 export class CortosComponent implements OnInit {
     botonesArr:any[] = [];
