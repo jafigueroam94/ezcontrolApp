@@ -15,6 +15,7 @@ import { ProductosMainComponent } from "./productos/productos.module";
 import { ProductosComponent } from "./productos/productos.component";
 import { BotonesComponent } from "./productos/botones/botones.component";
 import { CortosComponent } from "./productos/cortos/cortos.component";
+import { ElementoComponent } from "./productos/elemento/elemento.component";
 
 // HOME
 import { HomeMainComponent } from "./home/home.module";
@@ -50,6 +51,7 @@ import { ClientesComponent } from "./clientes/clientes.component";
         ProductosComponent,
         BotonesComponent,
         CortosComponent,
+        ElementoComponent,
         HomeMainComponent,
         HomeComponent,
         ContadorComponent,
